@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Flag Linux Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- LANGUAGE SWITCHER -->
+    <div id="lang-switcher">
+        <button onclick="setLang('en')" class="lang-btn active">EN</button>
+        <button onclick="setLang('ru')" class="lang-btn">RU</button>
+        <button onclick="setLang('zh')" class="lang-btn">中文</button>
+    </div>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="header-left">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polygon
+                        points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                </svg>
+                <div class="header-titles">
+                    <h1 class="lang-en">Red Flag Linux Tutorials</h1>
+                    <h1 class="lang-ru" style="display: none;">Учебники по Red Flag Linux</h1>
+                    <h1 class="lang-zh" style="display: none;">红旗 Linux 安装教程</h1>
+
+
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="lang-en">Versions: 2.0, 3.0, Apple TV</div>
+                <div class="lang-ru" style="display: none;">Версии: 2.0, 3.0, Apple TV</div>
+                <div class="lang-zh" style="display: none;">版本: 2.0, 3.0, Apple TV</div>
+            </div>
+        </header>
+
+        <!-- NAVIGATION TABS -->
+        <nav>
+            <button class="tab-btn active" data-target="tab-overview">
+                <span class="lang-en">Overview</span>
+                <span class="lang-ru" style="display: none;">Обзор</span>
+                <span class="lang-zh" style="display: none;">概述</span>
+            </button>
+            <button class="tab-btn" data-target="tab-v2">
+                <span class="lang-en">Version 2.0 (2000)</span>
+                <span class="lang-ru" style="display: none;">Версия 2.0 (2000)</span>
+                <span class="lang-zh" style="display: none;">版本 2.0 (2000)</span>
+            </button>
+            <button class="tab-btn" data-target="tab-v3">
+                <span class="lang-en">Version 3.0 (2002)</span>
+                <span class="lang-ru" style="display: none;">Версия 3.0 (2002)</span>
+                <span class="lang-zh" style="display: none;">版本 3.0 (2002)</span>
+            </button>
+            <button class="tab-btn" data-target="tab-appletv">
+                <span class="lang-en">Apple TV Port</span>
+                <span class="lang-ru" style="display: none;">Порт Apple TV</span>
+                <span class="lang-zh" style="display: none;">Apple TV 移植版</span>
+            </button>
+        </nav>
+
+        <div class="main-layout">
+            <!-- LEFT SIDEBAR -->
+            <div class="sidebar">
+                <h3 class="lang-en">About Red Flag Linux</h3>
+                <h3 class="lang-ru" style="display: none;">О Red Flag Linux</h3>
+                <h3 class="lang-zh" style="display: none;">关于红旗Linux</h3>
+
+                <ul>
+                    <li><b>Founded:</b> 1999 (Chinese Academy of Sciences)</li>
+                    <li><b>Based on:</b> Red Hat, Fedora</li>
+                    <li><b>Desktop:</b> KDE</li>
+                    <li><b>Arch:</b> x86 (32-bit)</li>
+                    <li><b>Language:</b> Simplified Chinese</li>
+                    <li><b>Latest:</b> v11.0 (2021)</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <h3 class="lang-en">ISO Downloads</h3>
+                <h3 class="lang-ru" style="display: none;">Скачать ISO</h3>
+                <h3 class="lang-zh" style="display: none;">ISO 下载</h3>
+
+                <ul>
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://archive.org/details/red-flag-os-2.0" target="_blank">
+                            <span class="lang-en">Red Flag 2.0 Desktop ISO</span>
+                            <span class="lang-ru" style="display: none;">Red Flag 2.0 Desktop ISO</span>
+                            <span class="lang-zh" style="display: none;">Red Flag 2.0 桌面版 ISO</span>
+                        </a><br>
+                        <a href="https://drive.google.com/file/d/1rIjVmu-45f7HIVBy2bGntw1mT8yZTxoB/view?usp=sharing"
+                            target="_blank" style="font-size: 0.85em; color: var(--color-primary);">[ Mirror: Google
+                            Drive ]</a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://archive.org/details/redflag3.0" target="_blank">
+                            <span class="lang-en">Red Flag 3.0 Desktop ISO</span>
+                            <span class="lang-ru" style="display: none;">Red Flag 3.0 Desktop ISO</span>
+                            <span class="lang-zh" style="display: none;">Red Flag 3.0 桌面版 ISO</span>
+                        </a><br>
+                        <a href="https://drive.google.com/file/d/1D7b0J1saubEJlBeXkoEWKHrXPYORsvv0/view?usp=sharing"
+                            target="_blank" style="font-size: 0.85em; color: var(--color-primary);">[ Mirror: Google
+                            Drive ]</a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://archive.org/details/redflag_hdd" target="_blank">
+                            <span class="lang-en">Pre-patched disk image with Red Flag OS 3.0</span>
+                            <span class="lang-ru" style="display: none;">Готовый образ диска с Red Flag OS 3.0</span>
+                            <span class="lang-zh" style="display: none;">红旗 OS 3.0 预补丁磁盘映像</span>
+                        </a><br>
+                        <a href="https://drive.google.com/file/d/1t_I-WgDROsxc_fimSQP_1Mc_pda4Cqba/view?usp=sharing"
+                            target="_blank" style="font-size: 0.85em; color: var(--color-primary);">[ Mirror: Google
+                            Drive ]</a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://archive.org/details/red-flag-os-apple-tv.img" target="_blank">
+                            <span class="lang-en">Apple TV 1st Gen. Red Flag OS 3.0 image</span>
+                            <span class="lang-ru" style="display: none;">Образ Red Flag OS 3.0 для Apple TV 1
+                                Gen.</span>
+                            <span class="lang-zh" style="display: none;">Apple TV 第一代红旗 OS 3.0 映像</span>
+                        </a><br>
+                        <a href="https://drive.google.com/file/d/1ba5S4aBsIvfIhIdAb7EQ1WhdNue4cd2H/view?usp=sharing"
+                            target="_blank" style="font-size: 0.85em; color: var(--color-primary);">[ Mirror: Google
+                            Drive ]</a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://archive.org/details/install_redflag_appletv" target="_blank">
+                            <span class="lang-en">Apple TV Install Script</span>
+                            <span class="lang-ru" style="display: none;">Скрипт установки для Apple TV</span>
+                            <span class="lang-zh" style="display: none;">Apple TV 安装脚本</span>
+                        </a><br>
+                        <a href="https://drive.google.com/file/d/1OrOJ5hF79j3QysVWTkJUxN6NJh0zhzi9/view?usp=sharing"
+                            target="_blank" style="font-size: 0.85em; color: var(--color-primary);">[ Mirror: Google
+                            Drive ]</a>
+                    </li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <div class="warning-box">
+                    <b class="lang-en">WARNING</b>
+                    <b class="lang-ru" style="display: none;">ВНИМАНИЕ</b>
+                    <b class="lang-zh" style="display: none;">警告</b>
+                    <br>
+                    <span class="lang-en">These are historical systems. Run in a VM (VirtualBox/QEMU). Do not install on
+                        modern hardware without precautions.</span>
+                    <span class="lang-ru" style="display: none;">Это исторические системы. Запускайте в виртуальной
+                        машине (VirtualBox/QEMU). Не устанавливайте на современное оборудование без мер
+                        предосторожности.</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="lang-en">Contact & Support</h3>
+                <h3 class="lang-ru" style="display: none;">Связь и Поддержка</h3>
+                <h3 class="lang-zh" style="display: none;">联系和支持</h3>
+
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 5px;"><b>Telegram:</b> <a href="https://t.me/errordan"
+                            target="_blank">@errordan</a></li>
+                    <li style="margin-bottom: 5px;"><b>Discord:</b> @errordan</li>
+                    <li style="margin-bottom: 5px;"><b>YouTube:</b> <a href="https://youtube.com/@errordan_2"
+                            target="_blank">errordan_2</a></li>
+                </ul>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="content-area">
+                <!-- TAB 1: OVERVIEW -->
+                <div id="tab-overview" class="tab-content active">
+                    <h2 class="lang-en">Overview</h2>
+                    <h2 class="lang-ru" style="display: none;">Обзор</h2>
+                    <h2 class="lang-zh" style="display: none;">概述</h2>
+
+                    <p class="lang-en">Red Flag Linux is a Linux distribution developed by Red Flag Software. It was
+                        heavily promoted by the Chinese government as a replacement for foreign operating systems to
+                        ensure national information security.</p>
+                    <p class="lang-ru" style="display: none;">Red Flag Linux это дистрибутив Linux, разработанный
+                        компанией Red Flag Software. Он активно продвигался китайским правительством как замена
+                        иностранным операционным системам для обеспечения национальной информационной безопасности.</p>
+                    <p class="lang-zh" style="display: none;">
+                        红旗Linux是由红旗软件开发的Linux发行版。它得到中国政府的大力推广，以替代外国操作系统，从而确保国家信息安全。</p>
+
+                    <p class="lang-en">This documentation portal serves as an archival tutorial hub for installing
+                        early, historically significant versions of the OS, specifically the rare 2.0 and 3.0 releases
+                        from the early 2000s, as well as experimental ports to non-standard hardware like the Apple TV.
+                    </p>
+                    <p class="lang-ru" style="display: none;">Этот портал документации служит архивным учебным центром
+                        для установки ранних, исторически значимых версий ОС, в частности редких релизов 2.0 и 3.0
+                        начала 2000-х годов, а также экспериментальных портов на нестандартное оборудование, такое как
+                        Apple TV.</p>
+                    <p class="lang-zh" style="display: none;">
+                        该文档门户充当一个档案教程中心，用于安装该操作系统早期的、具有历史意义的版本，特别是21世纪初罕见的2.0和3.0版本，以及针对非标准硬件（如Apple TV）的实验性移植版。</p>
+
+                    <p class="lang-en">Use the navigation tabs above to read specific installation instructions and
+                        technical details for each release.</p>
+                    <p class="lang-ru" style="display: none;">Используйте вкладки навигации выше, чтобы прочитать
+                        конкретные инструкции по установке и технические детали для каждого релиза.</p>
+                    <p class="lang-zh" style="display: none;">使用上面的导航标签可以阅读每个版本的具体安装说明和技术细节。</p>
+
+                    <div
+                        style="margin: 25px 0; border: 2px solid var(--color-border); border-radius: 4px; padding: 15px; background: rgba(0,0,0,0.05);">
+                        <h3 class="lang-en" style="margin-top: 0;">Video Showcase</h3>
+                        <h3 class="lang-ru" style="display: none; margin-top: 0;">Видеообзор</h3>
+                        <h3 class="lang-zh" style="display: none; margin-top: 0;">视频展示</h3>
+                        <iframe width="100%"
+                            style="aspect-ratio: 16/9; max-width: 100%; border-radius: 4px; display: block; border: none;"
+                            src="https://www.youtube.com/embed/qNzgYXDb7C4" title="Red Flag OS Showcase"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="warning-box" style="margin-top: 20px;">
+                        <b class="lang-en">Disclaimer</b>
+                        <b class="lang-ru" style="display: none;">Отказ от ответственности</b>
+                        <b class="lang-zh" style="display: none;">免责声明</b>
+                        <br>
+                        <span class="lang-en">The author of this portal ('errordan') does not own the rights to Red Flag
+                            OS, associated software, or distribution materials. This project is created strictly for
+                            historical archival and educational purposes. The author bears no responsibility for any
+                            potential damage, data loss, or issues arising from the use of these materials.<br><br>
+                            <strong>Note:</strong> Due to the extreme age of these systems, the provided tutorials may
+                            not work perfectly in all cases. If you encounter issues, you can contact errordan for help
+                            or search for solutions independently.</span>
+                        <span class="lang-ru" style="display: none;">Автор данного портала ('errordan') не владеет
+                            правами на Red Flag OS, связанное программное обеспечение или дистрибутивы. Этот проект
+                            создан исключительно в историко-архивных и образовательных целях. Автор не несет никакой
+                            ответственности за возможный ущерб, потерю данных или проблемы, возникшие в результате
+                            использования этих материалов.<br><br>
+                            <strong>Примечание:</strong> Из-за огромного возраста систем, в некоторых случаях инструкции
+                            могут не сработать идеально. Если у вас возникли проблемы, обращайтесь к errordan за помощью
+                            или ищите решения самостоятельно.</span>
+                        <span class="lang-zh" style="display: none;">本门户的作者（'errordan'）不拥有红旗
+                            OS、相关软件或分发材料的权利。本项目严格出于历史归档和教育目的而创建。作者对因使用这些材料而可能造成的任何损坏、数据丢失或问题不承担任何责任。<br><br>
+                            <strong>注意：</strong>由于这些系统非常古老，提供的教程在某些情况下可能无法完美运行。如果您遇到问题，可以联系 errordan
+                            寻求帮助或自行寻找解决方案。</span>
+                    </div>
+
+                    <details style="margin-top: 20px; font-size: 0.9em; color: #777;">
+                        <summary style="cursor: pointer; outline: none;">
+                            <span class="lang-en">About the development of this project...</span>
+                            <span class="lang-ru" style="display: none;">О разработке этого проекта...</span>
+                            <span class="lang-zh" style="display: none;">关于本项目的开发...</span>
+                        </summary>
+                        <div style="margin-top: 10px; padding-left: 15px; border-left: 2px solid #555;">
+                            <span class="lang-en">Please note that Artificial Intelligence was used during the
+                                development of this project. Complex tasks such as reverse engineering the legacy
+                                kernels, patching Mach-O headers, and working with raw hex code were beyond the author's
+                                technical capabilities and were accomplished with the help of AI.</span>
+                            <span class="lang-ru" style="display: none;">Обратите внимание, что в ходе разработки этого
+                                проекта активно использовался Искусственный Интеллект. Сложные задачи, такие как
+                                реверс-инжиниринг старых ядер, патчинг заголовков и работа с hex-кодом, были автору не
+                                под силу и были выполнены исключительно с помощью ИИ.</span>
+                            <span class="lang-zh"
+                                style="display: none;">请注意，在本项目开发期间使用了人工智能。诸如逆向工程旧内核、修补标头以及处理原始十六进制代码等复杂任务超出了作者的技术能力，是在
+                                AI 的帮助下完成的。</span>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- TAB 2: VERSION 2.0 -->
+                <div id="tab-v2" class="tab-content">
+                    <h2 class="lang-en">Version 2.0 (2000) Installation</h2>
+                    <h2 class="lang-ru" style="display: none;">Установка версии 2.0 (2000)</h2>
+                    <h2 class="lang-zh" style="display: none;">版本 2.0 (2000年) 安装</h2>
+
+                    <p class="lang-en">Red Flag OS 2.0 is a very old (2001) Chinese Linux distribution based on kernel
+                        2.2. It cannot be run "out of the box" on modern emulators due to incompatibilities between the
+                        old kernel and modern virtual devices.</p>
+                    <p class="lang-ru" style="display: none;">Red Flag OS 2.0 — это очень старый (2001 год) китайский
+                        дистрибутив Linux на ядре 2.2. Запустить его на современных эмуляторах "из коробки" невозможно
+                        из-за несовместимости старого ядра с современными виртуальными устройствами.</p>
+                    <p class="lang-zh" style="display: none;">红旗 OS 2.0 是一个非常古老的（2001 年）基于 2.2 内核的中国 Linux
+                        发行版。由于旧内核与现代虚拟设备不兼容，它无法在现代模拟器上“开箱即用”地运行。</p>
+
+                    <img src="OS2.jpeg" alt="Red Flag OS 2.0 Screenshot" class="content-img">
+
+                    <div class="warning-box">
+                        <b class="lang-en">Important Notice</b>
+                        <b class="lang-ru" style="display: none;">Важное замечание</b>
+                        <b class="lang-zh" style="display: none;">重要提示</b>
+                        <br>
+                        <span class="lang-en">This guide is verified and works ONLY under Linux (tested on Ubuntu).
+                            Using QEMU on Windows for old OSes often leads to critical errors.</span>
+                        <span class="lang-ru" style="display: none;">Данная инструкция проверена и работает ТОЛЬКО под
+                            Linux (проверено на Ubuntu). Использование QEMU под Windows для старых ОС часто приводит к
+                            критическим ошибкам.</span>
+                        <span class="lang-zh" style="display: none;">本指南仅在 Linux 下（已在 Ubuntu 上测试）经过验证且有效。在 Windows 下使用
+                            QEMU 运行旧操作系统通常会导致严重错误。</span>
+                    </div>
+
+                    <h3 class="lang-en">1. Preparation and Installation</h3>
+                    <h3 class="lang-ru" style="display: none;">1. Подготовка и Установка</h3>
+                    <h3 class="lang-zh" style="display: none;">1. 准备和安装</h3>
+
+                    <p class="lang-en">First, create a 6GB virtual hard drive:</p>
+                    <p class="lang-ru" style="display: none;">Для начала создайте виртуальный жесткий диск объемом 6 ГБ:
+                    </p>
+                    <p class="lang-zh" style="display: none;">首先，创建一个 6GB 的虚拟硬盘：</p>
+                    <pre><code>qemu-img create -f qcow2 redflag2_hdd.qcow2 6G</code></pre>
+
+                    <p class="lang-en">Start the installation from the CD-ROM. You must use the Cirrus video card
+                        (<code>-vga cirrus</code>), as the standard QEMU video adapter will cause the XFree86 installer
+                        to crash:</p>
+                    <p class="lang-ru" style="display: none;">Запустите установку с CD-ROM. Обязательно используйте
+                        видеокарту Cirrus (<code>-vga cirrus</code>), так как стандартный QEMU-видеоадаптер приведет к
+                        падению установщика XFree86:</p>
+                    <p class="lang-zh" style="display: none;">从 CD-ROM 启动安装。必须使用 Cirrus 显卡
+                        (<code>-vga cirrus</code>)，因为标准的 QEMU 视频适配器会导致 XFree86 安装程序崩溃：</p>
+                    <pre><code>qemu-system-x86_64 -m 256 -cdrom redflag2.0.iso -hda redflag2_hdd.qcow2 -boot d -vga cirrus</code></pre>
+
+                    <p class="lang-en">Proceed with the standard installation process.</p>
+                    <p class="lang-ru" style="display: none;">Пройдите стандартный процесс установки.</p>
+                    <p class="lang-zh" style="display: none;">继续标准安装过程。</p>
+
+                    <h3 class="lang-en">2. Fixing Fatal Post-Installation Errors</h3>
+                    <h3 class="lang-ru" style="display: none;">2. Фикс фатальных ошибок после установки</h3>
+                    <h3 class="lang-zh" style="display: none;">2. 修复安装后的致命错误</h3>
+
+                    <p class="lang-en">If you simply try to boot the installed system, you will encounter multiple
+                        issues:</p>
+                    <p class="lang-ru" style="display: none;">Если просто попытаться загрузить установленную систему, вы
+                        столкнетесь с проблемами:</p>
+                    <p class="lang-zh" style="display: none;">如果直接尝试启动已安装的系统，将遇到多个问题：</p>
+
+                    <ul>
+                        <li class="lang-en">Freezing at <code>Partition check: hda: lost interrupt</code> (kernel loses
+                            interrupts because DMA is too fast).</li>
+                        <li class="lang-ru" style="display: none;">Зависание на
+                            <code>Partition check: hda: lost interrupt</code> (ядро теряет прерывания из-за слишком
+                            быстрого DMA).
+                        </li>
+                        <li class="lang-zh" style="display: none;">卡在
+                            <code>Partition check: hda: lost interrupt</code>（由于 DMA 太快，内核丢失中断）。
+                        </li>
+
+                        <li class="lang-en"><code>Kernel panic: requires TSC</code> (the old kernel does not understand
+                            QEMU default CPU).</li>
+                        <li class="lang-ru" style="display: none;"><code>Kernel panic: requires TSC</code> (старое ядро
+                            не понимает дефолтный процессор эмулятора).</li>
+                        <li class="lang-zh" style="display: none;"><code>Kernel panic: requires TSC</code>（旧内核不理解 QEMU
+                            的默认 CPU）。</li>
+
+                        <li class="lang-en">The GUI will "spin" and crash due to a conflict between old acceleration and
+                            QEMU.</li>
+                        <li class="lang-ru" style="display: none;">Графический интерфейс будет "вращаться" и вылетать
+                            из-за конфликта старого ускорения с QEMU.</li>
+                        <li class="lang-zh" style="display: none;">由于旧加速与 QEMU 之间的冲突，GUI 将会“旋转”并崩溃。</li>
+                    </ul>
+
+                    <p class="lang-en">To fix this, you need to mount the virtual disk to your host system (Linux) and
+                        make edits:</p>
+                    <p class="lang-ru" style="display: none;">Чтобы это исправить, нужно примонтировать виртуальный диск
+                        к хост-системе (Linux) и внести правки:</p>
+                    <p class="lang-zh" style="display: none;">为了修复此问题，您需要将虚拟磁盘挂载到主机系统 (Linux) 并进行编辑：</p>
+
+                    <pre><code># 1. Mount the disk
+sudo modprobe nbd max_part=8
+sudo qemu-nbd -c /dev/nbd0 redflag2_hdd.qcow2
+sudo mkdir -p /mnt/redflag2
+sudo mount /dev/nbd0p1 /mnt/redflag2
+
+# 2. Install extlinux bootloader (replaces broken LILO)
+sudo apt-get install -y extlinux syslinux-common
+sudo extlinux --install /mnt/redflag2/boot
+sudo bash -c 'dd if=/usr/lib/syslinux/mbr/mbr.bin of=/dev/nbd0 bs=440 count=1 conv=notrunc'
+
+# 3. Create a proper bootloader config with DMA disabled (ide=nodma)
+sudo bash -c 'cat > /mnt/redflag2/boot/extlinux.conf &lt;&lt; EOF
+DEFAULT linuxup
+TIMEOUT 30
+PROMPT 1
+LABEL linuxup
+  KERNEL /boot/vmlinuz-2.2.16-22
+  INITRD /boot/initrd-2.2.16-22.img
+  APPEND root=/dev/hda1 ro ide=nodma
+EOF'
+
+# 4. Disable hardware acceleration in XFree86 so graphics do not break
+sudo sed -i 's|    Driver\t\t"cirrus"|    Driver\t\t"cirrus"\n    Option "noaccel"\n    Option "no_bitblt"|' /mnt/redflag2/etc/X11/XF86Config
+
+# 5. Unmount the disk
+sudo umount /mnt/redflag2
+sudo qemu-nbd -d /dev/nbd0</code></pre>
+
+                    <h3 class="lang-en">3. Correct System Startup</h3>
+                    <h3 class="lang-ru" style="display: none;">3. Правильный запуск системы</h3>
+                    <h3 class="lang-zh" style="display: none;">3. 正确的系统启动</h3>
+
+                    <p class="lang-en">Now that the system is patched, you can boot it using this command:</p>
+                    <p class="lang-ru" style="display: none;">Теперь, когда система пропатчена, её можно запускать.
+                        Используйте эту команду:</p>
+                    <p class="lang-zh" style="display: none;">现在系统已打补丁，您可以使用此命令引导它：</p>
+                    <pre><code>qemu-system-x86_64 -m 256 -cpu pentium3 -hda redflag2_hdd.qcow2 -boot c -vga cirrus</code></pre>
+
+                    <p class="lang-en">Here we limit memory to 256 MB (1 GB makes the 2.2 kernel go crazy) and emulate a
+                        <code>pentium3</code> to bypass the TSC error.
+                    </p>
+                    <p class="lang-ru" style="display: none;">Здесь мы ограничиваем память до 256 МБ (1 ГБ сводит ядро
+                        2.2 с ума) и эмулируем <code>pentium3</code>, чтобы обойти ошибку TSC.</p>
+                    <p class="lang-zh" style="display: none;">在这里，我们将内存限制为 256 MB（1 GB 会使 2.2 内核崩溃），并模拟
+                        <code>pentium3</code> 以绕过 TSC 错误。
+                    </p>
+
+                    <h3 class="lang-en">How to log in:</h3>
+                    <h3 class="lang-ru" style="display: none;">Как войти в систему:</h3>
+                    <h3 class="lang-zh" style="display: none;">如何登录：</h3>
+                    <ul>
+                        <li class="lang-en">At startup, the bootloader will automatically select <code>linuxup</code>
+                            (uniprocessor kernel). Be sure to use this, as the multiprocessor kernel
+                            (<code>linux</code>) will freeze in QEMU.</li>
+                        <li class="lang-ru" style="display: none;">При старте загрузчик автоматически выберет пункт
+                            <code>linuxup</code> (однопроцессорное ядро). Обязательно используйте его, так как
+                            многопроцессорное ядро (<code>linux</code>) зависнет в QEMU.
+                        </li>
+                        <li class="lang-zh" style="display: none;">在启动时，引导加载程序将自动选择
+                            <code>linuxup</code>（单处理器内核）。请务必使用此项，因为多处理器内核 (<code>linux</code>) 将在 QEMU 中冻结。
+                        </li>
+
+                        <li class="lang-en">During system boot, wait for the graphical boot window to appear and press
+                            <code>Ctrl + C</code> to skip it (or skip a hung step).
+                        </li>
+                        <li class="lang-ru" style="display: none;">Во время загрузки системы подождите появления
+                            графического окна загрузки и нажмите <code>Ctrl + C</code>, чтобы пропустить его (или
+                            пропустить зависший шаг).</li>
+                        <li class="lang-zh" style="display: none;">在系统引导期间，等待图形引导窗口出现，然后按 <code>Ctrl + C</code>
+                            跳过它（或跳过挂起的步骤）。</li>
+
+                        <li class="lang-en">Wait for the text login prompt to appear (<code>localhost login</code>).
+                            Enter the login <code>root</code> and the password you set during installation.</li>
+                        <li class="lang-ru" style="display: none;">Дождите появления текстового приглашения к вводу
+                            логина (<code>localhost login</code>). Введите логин <code>root</code> и пароль, который вы
+                            задали при установке.</li>
+                        <li class="lang-zh" style="display: none;">等待文本登录提示出现 (<code>localhost login</code>)。输入登录名
+                            <code>root</code> 和您在安装期间设置的密码。
+                        </li>
+
+                        <li class="lang-en">Start the graphical shell with the command: <code>startx</code></li>
+                        <li class="lang-ru" style="display: none;">Запустите графическую оболочку командой:
+                            <code>startx</code>
+                        </li>
+                        <li class="lang-zh" style="display: none;">使用命令启动图形 shell：<code>startx</code></li>
+                    </ul>
+                    <p class="lang-en">Done! You will land on the desktop of a stable running Red Flag OS 2.0.</p>
+                    <p class="lang-ru" style="display: none;">Готово! Вы попадете на рабочий стол стабильно работающей
+                        Red Flag OS 2.0.</p>
+                    <p class="lang-zh" style="display: none;">完成！您将进入稳定运行的红旗 OS 2.0 桌面。</p>
+
+                    <div class="divider"></div>
+                    <button class="btn lang-en"
+                        onclick="window.open('https://archive.org/details/red-flag-os-2.0', '_blank')">Download OS 2.0
+                        ISO</button>
+                    <button class="btn lang-ru" style="display: none;"
+                        onclick="window.open('https://archive.org/details/red-flag-os-2.0', '_blank')">Скачать OS 2.0
+                        ISO</button>
+                    <button class="btn lang-zh" style="display: none;"
+                        onclick="window.open('https://archive.org/details/red-flag-os-2.0', '_blank')">下载 OS 2.0
+                        ISO</button>
+                </div>
+
+                <!-- TAB 3: VERSION 3.0 -->
+                <div id="tab-v3" class="tab-content">
+                    <h2 class="lang-en">Version 3.0 Installation</h2>
+                    <h2 class="lang-ru" style="display: none;">Установка версии 3.0</h2>
+                    <h2 class="lang-zh" style="display: none;">版本 3.0 安装</h2>
+
+                    <p class="lang-en">Red Flag OS 3.0 is a rare Chinese Linux distribution from the early 2000s. When
+                        installing and running this system, enthusiasts often encounter built-in protection: a
+                        requirement to enter a "License Code" of a specific format. This guide shows how to run the
+                        system in QEMU and permanently disable the license check.</p>
+                    <p class="lang-ru" style="display: none;">Red Flag OS 3.0 — редкий китайский дистрибутив Linux
+                        начала 2000-х. При установке и запуске этой системы энтузиасты часто сталкиваются со встроенной
+                        защитой — требованием ввести лицензионный ключ (License Code) специфичного формата. В этом
+                        руководстве показано, как запустить систему в QEMU и навсегда отключить проверку лицензии.</p>
+                    <p class="lang-zh" style="display: none;">红旗 OS 3.0 是 21 世纪初罕见的中国 Linux
+                        发行版。在安装和运行此系统时，爱好者经常会遇到内置保护：要求输入特定格式的“许可代码”(License Code)。本指南展示了如何在 QEMU 中运行该系统并永久禁用许可检查。</p>
+
+                    <img src="OS3.jpeg" alt="Red Flag OS 3.0 Screenshot" class="content-img">
+
+                    <div class="warning-box">
+                        <b class="lang-en">Host OS Notice</b>
+                        <b class="lang-ru" style="display: none;">Замечание по ОС хоста</b>
+                        <b class="lang-zh" style="display: none;">主机操作系统注意事项</b>
+                        <br>
+                        <span class="lang-en">It is highly recommended to perform the installation on Linux. Attempting
+                            to install in QEMU under Windows often leads to specific bugs (e.g., fatal errors during
+                            package unpacking). Installation runs stably on Linux.</span>
+                        <span class="lang-ru" style="display: none;">Установку крайне рекомендуется проводить на Linux.
+                            При попытке установки в QEMU под Windows часто возникают специфические баги (например,
+                            фатальная ошибка при распаковке пакетов). На Linux установка проходит стабильно.</span>
+                        <span class="lang-zh" style="display: none;">强烈建议在 Linux 上执行安装。尝试在 Windows 下的 QEMU
+                            中安装通常会导致特定错误（例如，包解包期间的致命错误）。在 Linux 上安装稳定。</span>
+                    </div>
+
+                    <h3 class="lang-en">Step 1. System Installation</h3>
+                    <h3 class="lang-ru" style="display: none;">Шаг 1. Установка системы</h3>
+                    <h3 class="lang-zh" style="display: none;">步骤 1. 系统安装</h3>
+
+                    <p class="lang-en">Create a hard drive (e.g., 6 GB):</p>
+                    <p class="lang-ru" style="display: none;">Создайте жесткий диск (например, на 6 ГБ):</p>
+                    <p class="lang-zh" style="display: none;">创建一个硬盘（例如，6 GB）：</p>
+                    <pre><code>qemu-img create -f qcow2 redflag_hdd.qcow2 6G</code></pre>
+
+                    <p class="lang-en">Start the virtual machine booting from CD-ROM (<code>-boot d</code>):</p>
+                    <p class="lang-ru" style="display: none;">Запустите виртуальную машину с загрузкой с CD-ROM
+                        (<code>-boot d</code>):</p>
+                    <p class="lang-zh" style="display: none;">从 CD-ROM 引导启动虚拟机 (<code>-boot d</code>)：</p>
+                    <pre><code>qemu-system-x86_64 -m 1024 -cdrom redflag3.0.iso -hda redflag_hdd.qcow2 -boot d -vga std</code></pre>
+
+                    <p class="lang-en">Proceed with the standard installation process (disk selection, package
+                        installation).</p>
+                    <p class="lang-ru" style="display: none;">Пройдите стандартный процесс установки (выбор диска,
+                        установка пакетов).</p>
+                    <p class="lang-zh" style="display: none;">继续标准安装过程（磁盘选择，软件包安装）。</p>
+
+                    <h3 class="lang-en">Step 2. The License Window Problem</h3>
+                    <h3 class="lang-ru" style="display: none;">Шаг 2. Проблема окна лицензии</h3>
+                    <h3 class="lang-zh" style="display: none;">步骤 2. 许可窗口问题</h3>
+
+                    <p class="lang-en">After installation is complete and the system reboots, you will be greeted by a
+                        graphical window asking for a "License Code".</p>
+                    <p class="lang-ru" style="display: none;">После завершения установки и перезагрузки системы вас
+                        встретит графическое окно с требованием ввести "License Code".</p>
+                    <p class="lang-zh" style="display: none;">安装完成并重启系统后，您将看到一个要求输入“许可代码”的图形窗口。</p>
+
+                    <p class="lang-en"><strong>Why does this happen?</strong> The Red Flag developers cleverly embedded
+                        the key check directly into the KDE welcome screen (KDM) specifically in the
+                        <code>/usr/lib/libKdmGreet.so</code> library. Guessing the key or finding a working one online
+                        is practically impossible today.
+                    </p>
+                    <p class="lang-ru" style="display: none;"><strong>Почему это происходит?</strong> Разработчики хитро
+                        встроили проверку ключа прямо в экран приветствия KDE (KDM) в библиотеку
+                        <code>/usr/lib/libKdmGreet.so</code>. Подобрать ключ сегодня практически невозможно.
+                    </p>
+                    <p class="lang-zh" style="display: none;"><strong>为什么会这样？</strong> 红旗的开发人员巧妙地将密钥检查直接嵌入到 KDE 欢迎屏幕
+                        (KDM) 中，特别是 <code>/usr/lib/libKdmGreet.so</code> 库中。今天几乎不可能猜出密钥或在网上找到可用的密钥。</p>
+
+                    <p class="lang-en"><strong>Solution:</strong> Since the check is only hardcoded into KDM, we can
+                        simply switch the system to use the alternative display manager GDM (GNOME), which is already
+                        installed by default!</p>
+                    <p class="lang-ru" style="display: none;"><strong>Решение:</strong> Поскольку проверка вшита только
+                        в KDM, мы можем просто переключить систему на использование альтернативного дисплейного
+                        менеджера GDM (GNOME), который уже установлен по умолчанию!</p>
+                    <p class="lang-zh" style="display: none;"><strong>解决方案：</strong> 由于检查仅硬编码到 KDM
+                        中，我们可以简单地将系统切换为使用替代的显示管理器 GDM (GNOME)，它已经默认安装了！</p>
+
+                    <h3 class="lang-en">Step 3. Bypassing the Check (HDD Patch)</h3>
+                    <h3 class="lang-ru" style="display: none;">Шаг 3. Обход проверки (Патч HDD)</h3>
+                    <h3 class="lang-zh" style="display: none;">步骤 3. 绕过检查（HDD 补丁）</h3>
+
+                    <p class="lang-en">Close QEMU. Mount your virtual hard drive on a Linux system:</p>
+                    <p class="lang-ru" style="display: none;">Закройте QEMU. Смонтируйте виртуальный жесткий диск в
+                        Linux-системе:</p>
+                    <p class="lang-zh" style="display: none;">关闭 QEMU。在 Linux 系统上挂载虚拟硬盘：</p>
+
+                    <pre><code># Load Network Block Device module
+sudo modprobe nbd max_part=8
+# Connect disk image as block device
+sudo qemu-nbd -c /dev/nbd0 redflag_hdd.qcow2
+# Mount the first partition
+sudo mkdir -p /mnt/redflag
+sudo mount /dev/nbd0p1 /mnt/redflag</code></pre>
+
+                    <p class="lang-en">Now change the display manager configuration to force GNOME (GDM) instead of KDE
+                        (KDM):</p>
+                    <p class="lang-ru" style="display: none;">Теперь изменим конфигурацию для принудительного запуска
+                        GNOME (GDM) вместо KDE (KDM):</p>
+                    <p class="lang-zh" style="display: none;">现在更改显示管理器配置以强制使用 GNOME (GDM) 而不是 KDE (KDM)：</p>
+
+                    <pre><code>sudo bash -c 'echo "DESKTOP=GNOME" > /mnt/redflag/etc/sysconfig/desktop'</code></pre>
+
+                    <p class="lang-en">Unmount the disk and disconnect the device:</p>
+                    <p class="lang-ru" style="display: none;">Размонтируем диск и отключаем устройство:</p>
+                    <p class="lang-zh" style="display: none;">卸载磁盘并断开设备连接：</p>
+                    <pre><code>sudo umount /mnt/redflag
+sudo qemu-nbd -d /dev/nbd0</code></pre>
+
+                    <h3 class="lang-en">Step 4. Boot and Login</h3>
+                    <h3 class="lang-ru" style="display: none;">Шаг 4. Запуск и вход в систему</h3>
+                    <h3 class="lang-zh" style="display: none;">步骤 4. 引导并登录</h3>
+
+                    <p class="lang-en">Now run QEMU booting from the hard drive (<code>-boot c</code>):</p>
+                    <p class="lang-ru" style="display: none;">Теперь запускайте QEMU с загрузкой с жесткого диска
+                        (<code>-boot c</code>):</p>
+                    <p class="lang-zh" style="display: none;">现在运行从硬盘引导的 QEMU (<code>-boot c</code>)：</p>
+                    <pre><code>qemu-system-x86_64 -m 1024 -hda redflag_hdd.qcow2 -cdrom redflag3.0.iso -boot c -vga std</code></pre>
+
+                    <p class="lang-en">Instead of the license window, the standard GDM (GNOME) login screen will load.
+                        Enter the login <code>root</code> and your installation password to access the desktop with full
+                        administrator rights.</p>
+                    <p class="lang-ru" style="display: none;">Вместо окна лицензии загрузится стандартный экран входа
+                        GDM (GNOME). Введите логин <code>root</code> и ваш пароль для входа на рабочий стол со всеми
+                        правами администратора.</p>
+                    <p class="lang-zh" style="display: none;">系统将加载标准的 GDM (GNOME) 登录屏幕，而不是许可窗口。输入登录名 <code>root</code>
+                        和安装密码，即可访问具有完全管理员权限的桌面。</p>
+
+                    <div class="divider"></div>
+
+                    <p class="lang-en"><strong>Alternatively:</strong> You can simply download a pre-patched disk image
+                        with Red Flag OS 3.0 already installed and the license bypassed!</p>
+                    <p class="lang-ru" style="display: none;"><strong>Альтернативный вариант:</strong> Вы можете просто
+                        скачать готовый пропатченный образ диска с уже установленной Red Flag OS 3.0 без проверки
+                        лицензии!</p>
+                    <p class="lang-zh" style="display: none;"><strong>或者：</strong> 您可以直接下载预先打好补丁的磁盘映像，其中已安装红旗 OS 3.0
+                        并且绕过了许可证！</p>
+
+                    <button class="btn lang-en"
+                        onclick="window.open('https://archive.org/details/redflag3.0', '_blank')"
+                        style="margin-right: 10px;">Download OS 3.0 ISO</button>
+                    <button class="btn lang-ru" style="display: none;"
+                        onclick="window.open('https://archive.org/details/redflag3.0', '_blank')"
+                        style="margin-right: 10px;">Скачать OS 3.0
+                        ISO</button>
+                    <button class="btn lang-zh" style="display: none;"
+                        onclick="window.open('https://archive.org/details/redflag3.0', '_blank')"
+                        style="margin-right: 10px;">下载 OS 3.0
+                        ISO</button>
+
+                    <button class="btn lang-en"
+                        onclick="window.open('https://archive.org/details/redflag_hdd', '_blank')"
+                        style="background-color: #666;">Download Pre-patched OS 3.0 Image</button>
+                    <button class="btn lang-ru" style="display: none;"
+                        onclick="window.open('https://archive.org/details/redflag_hdd', '_blank')"
+                        style="background-color: #666;">Скачать
+                        готовый образ OS 3.0</button>
+                    <button class="btn lang-zh" style="display: none;"
+                        onclick="window.open('https://archive.org/details/redflag_hdd', '_blank')"
+                        style="background-color: #666;">下载预补丁 OS
+                        3.0 映像</button>
+                </div>
+
+                <!-- TAB 4: APPLE TV PORT -->
+                <div id="tab-appletv" class="tab-content">
+                    <h2 class="lang-en">Apple TV Port</h2>
+                    <h2 class="lang-ru" style="display: none;">Порт Apple TV</h2>
+                    <h2 class="lang-zh" style="display: none;">Apple TV 移植版</h2>
+
+                    <p class="lang-en">The Apple TV 1G features an Intel Pentium M and an ICH7M chipset but lacks a
+                        standard BIOS, relying on a 32-bit Apple EFI implementation. Running a 2001 Linux distribution
+                        (kernel 2.4.7) on this hardware required overcoming specific boot and hardware initialization
+                        issues.</p>
+                    <p class="lang-ru" style="display: none;">Apple TV 1G использует процессор Intel Pentium M и чипсет
+                        ICH7M, но не имеет стандартного BIOS, полагаясь на 32-битную реализацию Apple EFI. Запуск
+                        дистрибутива Linux 2001 года (ядро 2.4.7) на этом оборудовании потребовал решения ряда проблем с
+                        загрузкой и инициализацией.</p>
+                    <p class="lang-zh" style="display: none;">Apple TV 1G 采用 Intel Pentium M 和 ICH7M 芯片组，但缺少标准 BIOS，依赖于
+                        32 位 Apple EFI 实现。在该硬件上运行 2001 年的 Linux 发行版（内核 2.4.7）需要克服特定的引导和硬件初始化问题。</p>
+
+                    <img src="APPLETV.jpeg" alt="Red Flag OS Apple TV Port Screenshot" class="content-img">
+
+                    <details
+                        style="margin-bottom: 20px; border: 1px solid var(--color-border); padding: 10px 15px; background-color: rgba(0,0,0,0.02);">
+                        <summary
+                            style="cursor: pointer; font-weight: bold; font-family: 'Noto Serif SC', serif; color: var(--color-primary); outline: none;">
+                            <span class="lang-en">View Technical Porting Phases (Phases 1-5)</span>
+                            <span class="lang-ru" style="display: none;">Показать технические фазы портирования (Фазы
+                                1-5)</span>
+                            <span class="lang-zh" style="display: none;">查看技术移植阶段 (阶段 1-5)</span>
+                        </summary>
+                        <div style="margin-top: 15px;">
+
+                            <h3 class="lang-en">Phase 1: EFI Boot Process</h3>
+                            <h3 class="lang-ru" style="display: none;">Фаза 1: Процесс загрузки EFI</h3>
+                            <h3 class="lang-zh" style="display: none;">阶段 1: EFI 引导过程</h3>
+
+                            <p class="lang-en">The Apple TV bootloader requires a macOS style <code>boot.efi</code> and
+                                <code>mach_kernel</code>. We used an <code>atv-bootloader</code> to wrap the Linux
+                                kernel. A Mach-O header patch was applied because the EFI expected a specific page size:
+                            </p>
+                            <p class="lang-ru" style="display: none;">Загрузчик Apple TV требует <code>boot.efi</code> и
+                                <code>mach_kernel</code> в стиле macOS. Мы использовали <code>atv-bootloader</code> для
+                                оборачивания ядра Linux. Был применен патч заголовка Mach-O, так как EFI ожидал
+                                определенный размер страницы:
+                            </p>
+                            <p class="lang-zh" style="display: none;">Apple TV 引导加载程序需要 macOS 风格的 <code>boot.efi</code>
+                                和 <code>mach_kernel</code>。我们使用 <code>atv-bootloader</code> 包装 Linux 内核。由于 EFI
+                                期望特定的页面大小，我们应用了 Mach-O 标头补丁：</p>
+                            <pre><code>xxd mach_kernel | sed -e "s/ffff ffff 1000/0100 0000 1000/" | xxd -r - mach_kernel_patched</code></pre>
+
+                            <h3 class="lang-en">Phase 2: Hybrid MBR and File System</h3>
+                            <h3 class="lang-ru" style="display: none;">Фаза 2: Hybrid MBR и Файловая система</h3>
+                            <h3 class="lang-zh" style="display: none;">阶段 2: Hybrid MBR 和文件系统</h3>
+
+                            <p class="lang-en">The Linux 2.4.7 kernel does not natively support GPT partitions. Using
+                                <code>gdisk</code>, we created a Hybrid MBR to expose the Linux partition to the legacy
+                                kernel while preserving the GPT structure for EFI.
+                            </p>
+                            <p class="lang-ru" style="display: none;">Ядро Linux 2.4.7 нативно не поддерживает разделы
+                                GPT. Используя <code>gdisk</code>, мы создали Hybrid MBR, чтобы показать раздел Linux
+                                старому ядру, сохранив структуру GPT для EFI.</p>
+                            <p class="lang-zh" style="display: none;">Linux 2.4.7 内核原生不支持 GPT 分区。使用
+                                <code>gdisk</code>，我们创建了 Hybrid MBR 以将 Linux 分区暴露给旧内核，同时为 EFI 保留 GPT 结构。
+                            </p>
+
+                            <p class="lang-en">Additionally, formatting the <code>ext3</code> partition required using a
+                                128 byte inode size (rather than the modern 256 byte default) for kernel compatibility.
+                            </p>
+                            <p class="lang-ru" style="display: none;">Кроме того, форматирование раздела
+                                <code>ext3</code> потребовало использования размера inode 128 байт (вместо современных
+                                256 байт) для совместимости с ядром.
+                            </p>
+                            <p class="lang-zh" style="display: none;">此外，格式化 <code>ext3</code> 分区需要使用 128 字节的 inode
+                                大小（而不是现代的 256 字节默认值），以实现内核兼容性。</p>
+
+                            <h3 class="lang-en">Phase 3: IDE Controller and Root Device</h3>
+                            <h3 class="lang-ru" style="display: none;">Фаза 3: Контроллер IDE и корневое устройство</h3>
+                            <h3 class="lang-zh" style="display: none;">阶段 3: IDE 控制器和根设备</h3>
+
+                            <p class="lang-en">Early boot resulted in a Kernel Panic due to failing to probe the IDE IRQ
+                                and attempting to mount the wrong root device (<code>error 19 mounting ext3</code>).</p>
+                            <p class="lang-ru" style="display: none;">Ранняя загрузка приводила к Kernel Panic из-за
+                                ошибки инициализации IDE IRQ и попытки смонтировать неверный корневой раздел
+                                (<code>error 19 mounting ext3</code>).</p>
+                            <p class="lang-zh" style="display: none;">由于未能探测 IDE IRQ
+                                并尝试挂载错误的根设备（<code>error 19 mounting ext3</code>），早期引导导致 Kernel Panic。</p>
+
+                            <p class="lang-en">We used a Python script to hex patch the <code>bzImage</code> header at
+                                offset <code>0x1FC</code>, changing the default root device from <code>0x0305</code>
+                                (hda5) to <code>0x0302</code> (hda2). The IDE interrupt issue was resolved by passing
+                                kernel parameters <code>ide0=0x1f0,0x3f6,14</code> combined with
+                                <code>acpi=off noapic pci=biosirq idle=poll</code> via
+                                <code>com.apple.Boot.plist</code>.
+                            </p>
+                            <p class="lang-ru" style="display: none;">Мы использовали Python скрипт для патча заголовка
+                                <code>bzImage</code> по смещению <code>0x1FC</code>, изменив корневое устройство с
+                                <code>0x0305</code> (hda5) на <code>0x0302</code> (hda2). Проблема прерывания IDE была
+                                решена передачей параметров ядра <code>ide0=0x1f0,0x3f6,14</code> вместе с
+                                <code>acpi=off noapic pci=biosirq idle=poll</code> через
+                                <code>com.apple.Boot.plist</code>.
+                            </p>
+                            <p class="lang-zh" style="display: none;">我们使用 Python 脚本对偏移量 <code>0x1FC</code> 处的
+                                <code>bzImage</code> 标头进行修补，将默认根设备从 <code>0x0305</code> (hda5) 更改为 <code>0x0302</code>
+                                (hda2)。IDE 中断问题通过在 <code>com.apple.Boot.plist</code> 中传递内核参数
+                                <code>ide0=0x1f0,0x3f6,14</code> 以及 <code>acpi=off noapic pci=biosirq idle=poll</code>
+                                得以解决。
+                            </p>
+
+                            <h3 class="lang-en">Phase 4: USB controller and Interrupt Routing</h3>
+                            <h3 class="lang-ru" style="display: none;">Фаза 4: USB-контроллер и маршрутизация прерываний
+                            </h3>
+                            <h3 class="lang-zh" style="display: none;">阶段 4: USB 控制器和中断路由</h3>
+
+                            <p class="lang-en">Initializing USB involved handling the ICH7M LEGSUP registers. The
+                                <code>usb-uhci.o</code> driver initially failed with a NULL pointer dereference because
+                                it could not recognize the ICH7M PCI Device ID.
+                            </p>
+                            <p class="lang-ru" style="display: none;">Инициализация USB потребовала работы с регистрами
+                                LEGSUP чипсета ICH7M. Драйвер <code>usb-uhci.o</code> изначально падал с разыменованием
+                                нулевого указателя, так как не мог распознать PCI Device ID чипсета ICH7M.</p>
+                            <p class="lang-zh" style="display: none;">初始化 USB 涉及处理 ICH7M LEGSUP
+                                寄存器。<code>usb-uhci.o</code> 驱动程序最初因空指针解引用而失败，因为它无法识别 ICH7M PCI 设备 ID。</p>
+
+                            <p class="lang-en">The solution was achieved by combining the kernel boot parameters
+                                (<code>acpi=off noapic pci=biosirq idle=poll</code>) with a startup script
+                                (<code>rc.local</code>). The script used <code>setpci</code> (e.g.,
+                                <code>setpci -d 8086:27c8 C0.w=8f00</code>) to clear the legacy support registers before
+                                loading the USB modules.
+                            </p>
+                            <p class="lang-ru" style="display: none;">Решение было достигнуто комбинацией параметров
+                                загрузки ядра (<code>acpi=off noapic pci=biosirq idle=poll</code>) со стартовым скриптом
+                                (<code>rc.local</code>). Скрипт использовал <code>setpci</code> (например,
+                                <code>setpci -d 8086:27c8 C0.w=8f00</code>) для очистки регистров поддержки legacy перед
+                                загрузкой модулей USB.
+                            </p>
+                            <p class="lang-zh" style="display: none;">
+                                解决方案是将内核引导参数（<code>acpi=off noapic pci=biosirq idle=poll</code>）与启动脚本（<code>rc.local</code>）结合使用。该脚本使用
+                                <code>setpci</code>（例如，<code>setpci -d 8086:27c8 C0.w=8f00</code>）在加载 USB 模块之前清除旧版支持寄存器。
+                            </p>
+
+                            <h3 class="lang-en">Phase 5: Finalizing Device Support</h3>
+                            <h3 class="lang-ru" style="display: none;">Фаза 5: Завершение поддержки устройств</h3>
+                            <h3 class="lang-zh" style="display: none;">阶段 5: 最终确定设备支持</h3>
+
+                            <p class="lang-en">While modifying the <code>uhci.o</code> driver binary directly was
+                                explored, the final configuration successfully loaded the USB drivers through proper
+                                <code>setpci</code> register initialization and ensuring that IRQ 10 was correctly
+                                assigned for the controller to function. With these adjustments, Red Flag OS 3.0
+                                successfully boots to the GNOME desktop with fully functioning USB inputs and hub
+                                support.
+                            </p>
+                            <p class="lang-ru" style="display: none;">Хотя рассматривалась прямая модификация бинарного
+                                файла драйвера <code>uhci.o</code>, финальная конфигурация успешно загрузила драйверы
+                                USB благодаря правильной инициализации регистров через <code>setpci</code> и обеспечению
+                                корректного назначения IRQ 10, что обязательно для работы контроллера. С этими
+                                изменениями Red Flag OS 3.0 успешно загружается до рабочего стола GNOME с полностью
+                                работающим USB вводом и поддержкой хаба.</p>
+                            <p class="lang-zh" style="display: none;">虽然探讨了直接修改 <code>uhci.o</code>
+                                驱动程序二进制文件的方法，但最终配置通过适当的 <code>setpci</code> 寄存器初始化并确保正确分配 IRQ 10（这是控制器运行所必需的），成功加载了 USB
+                                驱动程序。通过这些调整，红旗 Linux 3.0 成功启动到 GNOME 桌面，并具有功能齐全的 USB 输入和集线器支持。</p>
+                        </div>
+                    </details>
+
+                    <div
+                        style="border-left: 4px solid var(--color-primary); padding: 15px; background: rgba(204, 0, 0, 0.05); margin-bottom: 20px;">
+                        <h3 class="lang-en" style="margin-top: 0;">Universal Assembly Tools</h3>
+                        <h3 class="lang-ru" style="display: none; margin-top: 0;">Универсальные ассемблерные утилиты
+                        </h3>
+                        <h3 class="lang-zh" style="display: none; margin-top: 0;">通用汇编工具</h3>
+
+                        <p class="lang-en">The assembly tools developed during this project (<code>memwrite</code>,
+                            <code>disable_ioapic</code>, <code>elcr</code>) are 100 percent universal for any 32-bit
+                            Linux distribution. They will reliably configure the ICH7M chipset on the Apple TV
+                            regardless of the operating system. You can use these tools to boot other legacy
+                            distributions such as Slackware, Mandrake, or Debian.
+                        </p>
+                        <p class="lang-ru" style="display: none;">Ассемблерные утилиты, разработанные в ходе этого
+                            проекта (<code>memwrite</code>, <code>disable_ioapic</code>, <code>elcr</code>), на 100
+                            процентов универсальны для любого 32-битного дистрибутива Linux. Они надежно настраивают
+                            чипсет ICH7M на Apple TV независимо от ОС. Вы можете использовать их для загрузки других
+                            старых дистрибутивов, таких как Slackware, Mandrake или Debian.</p>
+                        <p class="lang-zh" style="display: none;">
+                            在此项目中开发的汇编工具（<code>memwrite</code>、<code>disable_ioapic</code>、<code>elcr</code>）对于任何 32 位
+                            Linux 发行版都是 100% 通用的。无论操作系统是什么，它们都能可靠地配置 Apple TV 上的 ICH7M 芯片组。你可以使用这些工具来引导其他旧版发行版，如
+                            Slackware、Mandrake 或 Debian。</p>
+
+                        <p class="lang-en"><strong>Why are they universal?</strong> These utilities were written in pure
+                            NASM x86 assembly without relying on the C standard library (<code>libc</code>) or any
+                            modern GCC compiler optimizations (which caused <code>Floating point exception</code>
+                            crashes on older CPUs due to SSE instructions). By exclusively using basic 80386
+                            instructions and direct Linux kernel system calls (<code>int 0x80</code>) for raw memory and
+                            I/O port access (<code>inb</code>/<code>outb</code>), these statically linked binaries are
+                            completely portable across virtually all 32-bit Linux kernels from the era.</p>
+                        <p class="lang-ru" style="display: none;"><strong>Почему они универсальны?</strong> Эти утилиты
+                            были написаны на чистом ассемблере x86 (NASM) без использования стандартной библиотеки C
+                            (<code>libc</code>) или современных оптимизаций компилятора GCC (которые вызывали падения
+                            <code>Floating point exception</code> на старых процессорах из-за внедрения SSE инструкций).
+                            Благодаря использованию только базовых инструкций 80386 и прямых системных вызовов ядра
+                            Linux (<code>int 0x80</code>) для доступа к сырой памяти и портам ввода-вывода
+                            (<code>inb</code>/<code>outb</code>), эти статически скомпонованные бинарные файлы
+                            портативны и работают практически на любых 32-битных ядрах Linux той эпохи.
+                        </p>
+                        <p class="lang-zh" style="display: none;"><strong>为什么它们是通用的？</strong> 这些实用程序是用纯 NASM x86
+                            汇编编写的，不依赖于 C 标准库（<code>libc</code>）或任何现代 GCC 编译器优化（这会由于 SSE 指令在较旧的 CPU 上导致
+                            <code>Floating point exception</code> 崩溃）。通过专门使用基本 80386 指令以及针对原始内存和 I/O
+                            端口访问（<code>inb</code>/<code>outb</code>）的直接 Linux
+                            内核系统调用（<code>int 0x80</code>），这些静态链接的二进制文件可完全跨越当时几乎所有 32 位 Linux 内核移植。
+                        </p>
+                        <p class="lang-en"><strong>Important:</strong> When using the <code>elcr</code> tool for the
+                            Apple TV USB controller, it is mandatory that the interrupt is set specifically to
+                            <strong>IRQ 10</strong> for the hardware to function properly.
+                        </p>
+                        <p class="lang-ru" style="display: none;"><strong>Важно:</strong> При использовании утилиты
+                            <code>elcr</code> для USB-контроллера Apple TV обязательно нужно выставлять прерывание
+                            строго на <strong>IRQ 10</strong>, иначе оборудование не будет работать.
+                        </p>
+                        <p class="lang-zh" style="display: none;"><strong>重要提示：</strong>在为 Apple TV USB 控制器使用
+                            <code>elcr</code> 工具时，必须将中断专门设置为 <strong>IRQ 10</strong>，硬件才能正常运行。
+                        </p>
+                    </div>
+
+                    <h3 class="lang-en">Download and Install</h3>
+                    <h3 class="lang-ru" style="display: none;">Скачать и Установить</h3>
+                    <h3 class="lang-zh" style="display: none;">下载和安装</h3>
+
+                    <p class="lang-en">Download the compressed 3.9 GB <code>.img.gz</code> disk image. Use the provided
+                        Linux bash script to write it to a drive for the Apple TV.</p>
+                    <p class="lang-ru" style="display: none;">Скачайте сжатый 3.9 ГБ <code>.img.gz</code> образ диска.
+                        Используйте предоставленный bash скрипт для записи на диск для Apple TV.</p>
+                    <p class="lang-zh" style="display: none;">下载压缩的 3.9 GB <code>.img.gz</code> 磁盘映像。使用提供的 Linux bash
+                        脚本将其写入 Apple TV 的驱动器。</p>
+
+                    <button class="btn lang-en"
+                        onclick="window.open('https://archive.org/details/red-flag-os-apple-tv.img', '_blank')">Download
+                        Image (3.9 GB)</button>
+                    <button class="btn lang-ru" style="display: none;"
+                        onclick="window.open('https://archive.org/details/red-flag-os-apple-tv.img', '_blank')">Скачать
+                        образ (3.9 ГБ)</button>
+                    <button class="btn lang-zh" style="display: none;"
+                        onclick="window.open('https://archive.org/details/red-flag-os-apple-tv.img', '_blank')">下载图片
+                        (3.9 GB)</button>
+
+                    <button class="btn lang-en"
+                        onclick="window.open('https://archive.org/details/install_redflag_appletv', '_blank')"
+                        style="background-color: #666; margin-left: 10px;">Download Installer Script</button>
+                    <button class="btn lang-ru" style="display: none;"
+                        onclick="window.open('https://archive.org/details/install_redflag_appletv', '_blank')"
+                        style="background-color: #666; margin-left: 10px;">Скачать скрипт установки</button>
+                    <button class="btn lang-zh" style="display: none;"
+                        onclick="window.open('https://archive.org/details/install_redflag_appletv', '_blank')"
+                        style="background-color: #666; margin-left: 10px;">下载安装脚本</button>
+
+                    <pre><code>chmod +x install_redflag_appletv.sh
+sudo ./install_redflag_appletv.sh</code></pre>
+                    <p class="lang-en">The script writes the drive using <code>oflag=direct</code> to bypass cache and
+                        ends by executing <code>sgdisk -e</code> to rebuild the GPT backup header for the new disk size.
+                    </p>
+                    <p class="lang-ru" style="display: none;">Скрипт записывает диск используя <code>oflag=direct</code>
+                        для обхода кэша и затем выполняет <code>sgdisk -e</code> для восстановления резервного GPT
+                        заголовка под новый размер диска.</p>
+                    <p class="lang-zh" style="display: none;">该脚本使用 <code>oflag=direct</code> 绕过缓存以实现写入，并通过执行
+                        <code>sgdisk -e</code> 来自动重建新磁盘大小的 GPT 备份标头来结束。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <span class="lang-en">&copy; 2026 Red Flag OS Archival Project. Educational and preservation purposes
+                only.</span>
+            <span class="lang-ru" style="display: none;">&copy; 2026 Проект архивации Red Flag OS. Только для
+                образовательных и архивных целей.</span>
+            <span class="lang-zh" style="display: none;">&copy; 2026 红旗 OS 归档项目。仅用于教育和保存目的。</span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
