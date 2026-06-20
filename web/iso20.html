@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Flag OS 2.0 ISO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="lang-switcher">
+            <button onclick="setLang('en')" class="lang-btn active">EN</button>
+            <button onclick="setLang('ru')" class="lang-btn">RU</button>
+            <button onclick="setLang('zh')" class="lang-btn">中文</button>
+        </div>
+        <div class="title-container">
+            <h1 class="terminal-text"><span>💿</span> Red Flag OS 2.0</h1>
+            <p class="subtitle lang-en">The pure, untouched installation disc from 2000.</p>
+            <p class="subtitle lang-ru" style="display: none;">Чистый, нетронутый установочный диск 2000 года.</p>
+            <p class="subtitle lang-zh" style="display: none;">来自 2000 年的纯净、未动过的安装盘。</p>
+            <a href="index.html" class="btn btn-secondary lang-en" style="margin-top: 1rem; padding: 0.5rem 1rem;">← Back to Hub</a>
+            <a href="index.html" class="btn btn-secondary lang-ru" style="display: none; margin-top: 1rem; padding: 0.5rem 1rem;">← Назад в Хаб</a>
+            <a href="index.html" class="btn btn-secondary lang-zh" style="display: none; margin-top: 1rem; padding: 0.5rem 1rem;">← 返回中心</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="card" style="text-align: center;">
+            <p class="lang-en">Download the standard bootable ISO for Virtual Machines or old PC hardware.</p>
+            <p class="lang-ru" style="display: none;">Скачайте стандартный загрузочный ISO для виртуальных машин или старых ПК.</p>
+            <p class="lang-zh" style="display: none;">下载用于虚拟机或旧 PC 硬件的标准可启动 ISO。</p>
+            
+            <a href="#" class="btn lang-en" style="margin-top: 2rem;" onclick="alert('ISO 2.0 Link')">Download ISO</a>
+            <a href="#" class="btn lang-ru" style="display: none; margin-top: 2rem;" onclick="alert('ISO 2.0 Link')">Скачать ISO</a>
+            <a href="#" class="btn lang-zh" style="display: none; margin-top: 2rem;" onclick="alert('ISO 2.0 Link')">下载 ISO</a>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
